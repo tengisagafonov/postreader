@@ -4,8 +4,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Posts from 'screens/posts';
 import CreatePost from 'screens/createPost';
 import {RootStackParams} from 'constants/routes';
+import {NavigationTheme} from 'config/Theme';
 
-type RootStackList = {
+export type RootStackList = {
   [RootStackParams.Posts]: undefined;
   [RootStackParams.CreatePost]: undefined;
 };
@@ -14,7 +15,7 @@ const RootStack = createNativeStackNavigator<RootStackList>();
 
 const Navigation = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={NavigationTheme}>
       <RootStack.Navigator
         screenOptions={{
           headerShown: false,
