@@ -16,10 +16,10 @@ const PostItem = ({item}: {item: PostType}) => {
           source={item.url ? {uri: item.url} : defaultImg}
         />
         <View style={styles.info}>
-          <Text style={styles.title}>Mobile development</Text>
+          <Text style={styles.title}>{item.title}</Text>
           <View style={styles.row}>
             <Text style={[styles.date, styles.dateLabel]}>Created at: </Text>
-            <Text style={styles.date}>08/01/22 08:38 pm</Text>
+            <Text style={styles.date}>{item.date}</Text>
           </View>
           <View style={status(item.status)}>
             <Text style={statusText(item.status)}>{item.status}</Text>
@@ -27,8 +27,7 @@ const PostItem = ({item}: {item: PostType}) => {
         </View>
       </View>
       <Text style={styles.description} numberOfLines={2} ellipsizeMode={'tail'}>
-        Hey there, I’d like to talk about mobile development CI/CD processes and
-        tooling. What are your thoughts on that?
+        {item.description}
       </Text>
     </View>
   );
