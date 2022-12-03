@@ -12,48 +12,15 @@ import HomeHeader from './components/homeHeader';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackList} from 'app/screens';
 import {RootStackParams} from 'constants/routes';
-import {PostType, Status} from 'types/post';
 import {Colors, fontSize, spacing} from 'config/Theme';
-
-const data: PostType[] = [
-  {
-    id: '1',
-    title: '',
-    date: '',
-    status: Status.Published,
-    url: '',
-    description: '',
-  },
-  {
-    id: '2',
-    title: 'twxx',
-    date: '',
-    status: Status.Draft,
-    url: '',
-    description: '',
-  },
-  {
-    id: '3',
-    title: 'ts',
-    date: '',
-    status: Status.Draft,
-    url: '',
-    description: '',
-  },
-  {
-    id: '4',
-    title: 'dt',
-    date: '',
-    status: Status.Draft,
-    url: '',
-    description: '',
-  },
-];
+import {useSelector} from 'react-redux';
+import {RootState} from 'store/rootReducer';
 
 const Posts: FC<
   NativeStackScreenProps<RootStackList, RootStackParams.Posts>
 > = props => {
   const {navigation} = props;
+  const data = useSelector((state: RootState) => state.post.posts);
   return (
     <View style={styles.main}>
       <HomeHeader />
