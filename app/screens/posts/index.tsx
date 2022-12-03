@@ -1,12 +1,46 @@
 import React, {FC} from 'react';
-import {View, FlatList, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import PostItem from 'app/screens/posts/components/postItem';
 import HomeHeader from './components/homeHeader';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackList} from 'app/screens';
 import {RootStackParams} from 'constants/routes';
+import {PostType, Status} from 'types/post';
 
-const data = [{id: 1, title: '', createdDate: '', status: 'Draft', url: ''}];
+const data: PostType[] = [
+  {
+    id: '1',
+    title: 'solo',
+    date: '',
+    status: Status.Published,
+    url: '',
+    description: '',
+  },
+  {
+    id: '2',
+    title: 'twxx',
+    date: '',
+    status: Status.Draft,
+    url: '',
+    description: '',
+  },
+  {
+    id: '3',
+    title: 'ts',
+    date: '',
+    status: Status.Draft,
+    url: '',
+    description: '',
+  },
+  {
+    id: '4',
+    title: 'dt',
+    date: '',
+    status: Status.Draft,
+    url: '',
+    description: '',
+  },
+];
 
 const Posts: FC<
   NativeStackScreenProps<RootStackList, RootStackParams.Posts>
