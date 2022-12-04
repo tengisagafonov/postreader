@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {PostType} from 'types/post';
 
 interface PostStateI {
@@ -16,9 +16,12 @@ const postSlice = createSlice({
     clearState: state => {
       state.posts = [];
     },
+    addPost: (state, action: PayloadAction<PostType>) => {
+      state.posts = [...state.posts, action.payload];
+    },
   },
 });
 
-export const {clearState} = postSlice.actions;
+export const {clearState, addPost} = postSlice.actions;
 
 export default postSlice.reducer;

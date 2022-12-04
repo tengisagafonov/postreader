@@ -18,7 +18,8 @@ import Dropdown from 'app/components/dropdown';
 import {Status} from 'types/post';
 
 const CreatePostForm = () => {
-  const {openPicker, uri, removeIcon, onSubmit} = usePostForm();
+  const {openPicker, post, removeIcon, onSubmit, updatePostByAttribute} =
+    usePostForm();
 
   return (
     <View style={styles.main}>
@@ -31,20 +32,26 @@ const CreatePostForm = () => {
               placeholderTextColor={Colors.placeholder}
               placeholder={'Title'}
               style={styles.input}
+              onChangeText={updatePostByAttribute('title')}
             />
-            <Dropdown placeholder={'Status'} data={Object.keys(Status)} />
+            <Dropdown
+              placeholder={'Status'}
+              data={Object.keys(Status)}
+              onChange={updatePostByAttribute('status')}
+            />
             <TextInput
               placeholderTextColor={Colors.placeholder}
               placeholder={'Description'}
               style={styles.input}
               multiline
+              onChangeText={updatePostByAttribute('description')}
             />
           </View>
           <View style={styles.photoPicker}>
             <Text style={styles.photoTitle}>Photo</Text>
-            <TouchableOpacity disabled={!!uri} onPress={openPicker}>
-              <FastImage source={{uri: uri}} style={styles.image}>
-                {uri ? (
+            <TouchableOpacity disabled={!!post.url} onPress={openPicker}>
+              <FastImage source={{uri: post.url}} style={styles.image}>
+                {post.url ? (
                   <Icon.CloseCircleIcon
                     style={styles.close}
                     action={removeIcon}

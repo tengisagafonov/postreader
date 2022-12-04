@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import {Icon} from 'assets/icons';
 import {Colors, spacing} from 'config/Theme';
-import CloseIcon from 'assets/icons/CloseIcon';
 
 interface IDropdownProps {
   placeholder: string;
@@ -48,7 +47,7 @@ const Dropdown = (props: IDropdownProps) => {
       <Modal animationType="slide" transparent visible={modalVisible}>
         <View style={styles.centered}>
           <TouchableOpacity style={styles.close} onPress={closeModal}>
-            <CloseIcon />
+            <Icon.CloseIcon />
           </TouchableOpacity>
           <ScrollView style={styles.data} showsVerticalScrollIndicator={false}>
             {data.map((item, idx) => (
@@ -97,7 +96,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.huge,
     paddingHorizontal: spacing.huge,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
       height: 2,

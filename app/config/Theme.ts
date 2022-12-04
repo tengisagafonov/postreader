@@ -2,6 +2,7 @@ import {DefaultTheme} from '@react-navigation/native';
 import {Status} from 'types/post';
 
 export const Colors = {
+  black: '#000',
   white: '#fff',
   background: '#F5F5F5',
   imgBackground: '#F2F3F3',
