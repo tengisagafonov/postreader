@@ -2,6 +2,7 @@ import {StyleSheet, ViewStyle} from 'react-native';
 import {Colors, fontSize, spacing, statusColors} from 'config/Theme';
 import {Status} from 'types/post';
 import {opacityColor} from 'utils/post';
+import {PostDimension} from 'constants/posts';
 
 export const styles = StyleSheet.create({
   main: {
@@ -12,7 +13,11 @@ export const styles = StyleSheet.create({
     paddingBottom: spacing.largerPlus,
   },
   row: {flexDirection: 'row'},
-  img: {height: 128, width: 128, borderRadius: 12},
+  img: {
+    height: PostDimension.height,
+    width: PostDimension.width,
+    borderRadius: 12,
+  },
   info: {alignItems: 'flex-start', marginLeft: spacing.larger},
   title: {fontWeight: '500', fontSize: fontSize.medium, lineHeight: 24},
   date: {

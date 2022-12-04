@@ -10,20 +10,12 @@ import {
   Platform,
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
-import ImagePicker from 'react-native-image-crop-picker';
 import {Icon} from 'assets/icons';
 import {styles} from './styles';
+import {usePostForm} from './usePostForm';
 
 const CreatePostForm = () => {
-  const openPicker = () => {
-    ImagePicker.openPicker({
-      width: 300,
-      height: 400,
-      cropping: true,
-    }).then(image => {
-      console.log(image.sourceURL);
-    });
-  };
+  const {openPicker, uri, removeIcon} = usePostForm();
 
   return (
     <View style={styles.main}>
@@ -41,17 +33,23 @@ const CreatePostForm = () => {
           </View>
           <View style={styles.photoPicker}>
             <Text style={styles.photoTitle}>Photo</Text>
-            <TouchableOpacity>
-              <FastImage source={{uri: ''}} style={styles.image}>
-                <Icon.AddIcon />
-                <Icon.CloseCircleIcon style={styles.close} />
+            <TouchableOpacity disabled={!!uri} onPress={openPicker}>
+              <FastImage source={{uri: uri}} style={styles.image}>
+                {uri ? (
+                  <Icon.CloseCircleIcon
+                    style={styles.close}
+                    action={removeIcon}
+                  />
+                ) : (
+                  <Icon.AddIcon />
+                )}
               </FastImage>
             </TouchableOpacity>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
       <SafeAreaView>
-        <TouchableOpacity style={styles.button} onPress={openPicker}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.text}>Submit</Text>
         </TouchableOpacity>
       </SafeAreaView>

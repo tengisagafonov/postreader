@@ -4,12 +4,14 @@ import {ViewStyle} from 'react-native';
 
 interface ICloseCircleIconProps {
   style?: ViewStyle;
+  action?: () => void;
 }
 
 const CloseCircleIcon = (props: ICloseCircleIconProps) => {
   return (
     <Svg
       style={props?.style}
+      onPress={props?.action}
       width="24"
       height="24"
       viewBox="0 0 24 24"
