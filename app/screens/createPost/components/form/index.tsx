@@ -10,10 +10,21 @@ import {
   Platform,
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
+import ImagePicker from 'react-native-image-crop-picker';
 import {Icon} from 'assets/icons';
 import {styles} from './styles';
 
 const CreatePostForm = () => {
+  const openPicker = () => {
+    ImagePicker.openPicker({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then(image => {
+      console.log(image.sourceURL);
+    });
+  };
+
   return (
     <View style={styles.main}>
       <KeyboardAvoidingView
@@ -40,7 +51,7 @@ const CreatePostForm = () => {
         </ScrollView>
       </KeyboardAvoidingView>
       <SafeAreaView>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={openPicker}>
           <Text style={styles.text}>Submit</Text>
         </TouchableOpacity>
       </SafeAreaView>
