@@ -19,6 +19,7 @@ const Posts: FC<
       <HomeHeader />
       <SafeAreaView style={styles.main}>
         <FlatList
+          keyExtractor={(item, idx) => item.title + idx}
           showsVerticalScrollIndicator={false}
           data={data}
           renderItem={PostItem}

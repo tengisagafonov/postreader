@@ -4,7 +4,6 @@ export enum Status {
 }
 
 export type PostType = {
-  id: string;
   title: string;
   status: Status;
   date: string;

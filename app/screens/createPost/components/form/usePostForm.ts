@@ -12,7 +12,6 @@ import {addPost} from 'store/reduxes/post';
 type PostFormType = Omit<PostType, 'status'> & {status: Status | undefined};
 
 const initialState: PostFormType = {
-  id: '',
   title: '',
   status: undefined,
   date: '',
