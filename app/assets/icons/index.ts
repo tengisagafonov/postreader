@@ -3,6 +3,7 @@ import ArrowLeftIcon from './ArrowLeftIcon';
 import CloseCircleIcon from './CloseCircleIcon';
 import AddIcon from './AddIcon';
 import ChevronIcon from './ChevronIcon';
+import CloseIcon from './CloseIcon';
 
 export const Icon = {
   LogoIcon,
@@ -10,4 +11,5 @@ export const Icon = {
   CloseCircleIcon,
   AddIcon,
   ChevronIcon,
+  CloseIcon,
 };

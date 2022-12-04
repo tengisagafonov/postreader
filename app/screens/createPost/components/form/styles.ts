@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
   },
   dropdownText: {color: Colors.placeholder},
   photoPicker: {
+    alignItems: 'flex-start',
     backgroundColor: Colors.white,
     marginTop: spacing.medium,
     paddingHorizontal: spacing.larger,

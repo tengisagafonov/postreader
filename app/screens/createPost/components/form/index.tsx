@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   KeyboardAvoidingView,
+  Platform,
   ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-  Platform,
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {Icon} from 'assets/icons';
@@ -14,6 +14,8 @@ import {styles} from './styles';
 import {usePostForm} from './usePostForm';
 import {Colors} from 'config/Theme';
 import Button from 'app/components/button';
+import Dropdown from 'app/components/dropdown';
+import {Status} from 'types/post';
 
 const CreatePostForm = () => {
   const {openPicker, uri, removeIcon, onSubmit} = usePostForm();
@@ -30,10 +32,7 @@ const CreatePostForm = () => {
               placeholder={'Title'}
               style={styles.input}
             />
-            <TouchableOpacity style={[styles.dropdown, styles.space]}>
-              <Text style={styles.dropdownText}>Status</Text>
-              <Icon.ChevronIcon />
-            </TouchableOpacity>
+            <Dropdown placeholder={'Status'} data={Object.keys(Status)} />
             <TextInput
               placeholderTextColor={Colors.placeholder}
               placeholder={'Description'}
