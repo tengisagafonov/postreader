@@ -45,18 +45,4 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.imgBackground,
   },
   close: {position: 'absolute', right: 0, top: 0},
-  button: {
-    backgroundColor: Colors.blue,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginHorizontal: spacing.larger,
-    borderRadius: 8,
-    padding: spacing.medium,
-  },
-  text: {
-    color: Colors.white,
-    fontWeight: '600',
-    fontSize: fontSize.normalPlus,
-    lineHeight: 20,
-  },
 });

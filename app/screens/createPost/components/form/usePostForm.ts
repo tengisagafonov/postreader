@@ -21,5 +21,7 @@ export const usePostForm = () => {
     setUri('');
   };
 
-  return {openPicker, uri, removeIcon};
+  const onSubmit = () => {};
+
+  return {openPicker, uri, removeIcon, onSubmit};
 };

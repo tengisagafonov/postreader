@@ -1,20 +1,13 @@
 import React, {FC} from 'react';
-import {
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet, View} from 'react-native';
 import PostItem from 'app/screens/posts/components/postItem';
 import HomeHeader from './components/homeHeader';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackList} from 'app/screens';
 import {RootStackParams} from 'constants/routes';
-import {Colors, fontSize, spacing} from 'config/Theme';
 import {useSelector} from 'react-redux';
 import {RootState} from 'store/rootReducer';
+import Button from 'app/components/button';
 
 const Posts: FC<
   NativeStackScreenProps<RootStackList, RootStackParams.Posts>
@@ -30,11 +23,10 @@ const Posts: FC<
           data={data}
           renderItem={PostItem}
         />
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate(RootStackParams.CreatePost)}>
-          <Text style={styles.text}>New Post</Text>
-        </TouchableOpacity>
+        <Button
+          title={'New Post'}
+          onPress={() => navigation.navigate(RootStackParams.CreatePost)}
+        />
       </SafeAreaView>
     </View>
   );
@@ -42,20 +34,6 @@ const Posts: FC<
 
 const styles = StyleSheet.create({
   main: {flex: 1},
-  button: {
-    backgroundColor: Colors.blue,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginHorizontal: spacing.larger,
-    borderRadius: 8,
-    padding: spacing.medium,
-  },
-  text: {
-    color: Colors.white,
-    fontWeight: '600',
-    fontSize: fontSize.normalPlus,
-    lineHeight: 20,
-  },
 });
 
 export default Posts;
