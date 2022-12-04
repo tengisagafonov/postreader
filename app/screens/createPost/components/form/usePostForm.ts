@@ -37,7 +37,7 @@ export const usePostForm = () => {
     setPost(prev => ({...prev, ...{url: ''}}));
   };
 
-  const updatePostByAttribute = (attribute: string) => {
+  const updatePostByAttribute = (attribute: keyof PostFormType) => {
     return (text: string) =>
       setPost(prev => ({...prev, ...({[attribute]: text} as PostFormType)}));
   };
