@@ -10,6 +10,7 @@ export const Colors = {
   draft: '#D91616',
   published: '#10C137',
   blue: '#0071D8',
+  placeholder: '#8A8C90',
 };
 
 export enum spacing {

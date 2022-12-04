@@ -9,7 +9,7 @@ export const usePostForm = () => {
     ImagePicker.openPicker({
       width: PostDimension.width,
       height: PostDimension.height,
-      cropping: true,
+      cropping: false,
     })
       .then(image => {
         setUri(image.sourceURL);

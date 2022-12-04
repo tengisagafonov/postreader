@@ -11,11 +11,23 @@ export const styles = StyleSheet.create({
   },
   space: {marginTop: spacing.small, marginBottom: spacing.medium},
   input: {
+    width: '100%',
+    backgroundColor: Colors.background,
+    paddingHorizontal: spacing.medium,
+    paddingTop: spacing.input,
+    paddingBottom: spacing.input,
+    borderRadius: 8,
+  },
+  dropdown: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: Colors.background,
     paddingHorizontal: spacing.medium,
     paddingVertical: spacing.input,
     borderRadius: 8,
   },
+  dropdownText: {color: Colors.placeholder},
   photoPicker: {
     backgroundColor: Colors.white,
     marginTop: spacing.medium,

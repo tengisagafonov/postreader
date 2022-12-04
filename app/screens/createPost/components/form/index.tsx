@@ -13,6 +13,7 @@ import FastImage from 'react-native-fast-image';
 import {Icon} from 'assets/icons';
 import {styles} from './styles';
 import {usePostForm} from './usePostForm';
+import {Colors} from 'config/Theme';
 
 const CreatePostForm = () => {
   const {openPicker, uri, removeIcon} = usePostForm();
@@ -24,12 +25,21 @@ const CreatePostForm = () => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.form}>
-            <TextInput placeholder={'Title'} style={styles.input} />
             <TextInput
-              placeholder={'Status'}
-              style={[styles.input, styles.space]}
+              placeholderTextColor={Colors.placeholder}
+              placeholder={'Title'}
+              style={styles.input}
             />
-            <TextInput placeholder={'Description'} style={styles.input} />
+            <TouchableOpacity style={[styles.dropdown, styles.space]}>
+              <Text style={styles.dropdownText}>Status</Text>
+              <Icon.ChevronIcon />
+            </TouchableOpacity>
+            <TextInput
+              placeholderTextColor={Colors.placeholder}
+              placeholder={'Description'}
+              style={styles.input}
+              multiline
+            />
           </View>
           <View style={styles.photoPicker}>
             <Text style={styles.photoTitle}>Photo</Text>
