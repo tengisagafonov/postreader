@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     marginHorizontal: spacing.larger,
     borderRadius: 8,
     padding: spacing.medium,
+    marginBottom: spacing.small,
   },
   text: {
     fontFamily: 'Lato',

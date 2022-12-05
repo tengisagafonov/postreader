@@ -9,7 +9,7 @@ Assignment
     <td>CreatePost</td>
  </tr> 
    <tr>
-    <td> <img src="./app/assets/images/HomeScreen.png"  alt="1"  /></td>
+    <td><img src="./app/assets/images/HomeScreen.png"  alt="1"  /></td>
     <td><img src="./app/assets/images/CreateScreen.png" alt="3" /></td>
   </tr>
 </table>
