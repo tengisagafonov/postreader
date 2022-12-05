@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctyl 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "marginTop": 12,
+      "paddingBottom": 18,
+      "paddingHorizontal": 16,
+      "paddingTop": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 12,
+            "height": 128,
+            "width": 128,
+          },
+        ]
+      }
+    >
+      <FastImageView
+        defaultSource={null}
+        resizeMode="cover"
+        source={
+          Object {
+            "testUri": "../../../app/assets/images/default.png",
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "marginLeft": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontFamily": "Lato",
+            "fontSize": 18,
+            "fontWeight": "500",
+            "lineHeight": 24,
+          }
+        }
+      >
+        text
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Lato",
+                "fontSize": 12,
+                "marginVertical": 12,
+              },
+              Object {
+                "color": "#8A8C90",
+              },
+            ]
+          }
+        >
+          Created at: 
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Lato",
+              "fontSize": 12,
+              "marginVertical": 12,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(16, 193, 55, 0.1)",
+            "borderRadius": 8,
+            "paddingHorizontal": 12,
+            "paddingVertical": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#10C137",
+              "fontFamily": "Lato",
+              "fontSize": 14,
+              "fontWeight": "500",
+            }
+          }
+        >
+          Published
+        </Text>
+      </View>
+    </View>
+  </View>
+  <Text
+    ellipsizeMode="tail"
+    numberOfLines={2}
+    style={
+      Object {
+        "color": "#151C26",
+        "fontSize": 14,
+        "marginTop": 16,
+      }
+    }
+  />
+</View>
+`;

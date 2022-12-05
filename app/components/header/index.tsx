@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   back: {
     position: 'absolute',
-    left: spacing.huge,
+    left: spacing.medium,
   },
 });
 
