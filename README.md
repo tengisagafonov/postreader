@@ -1,5 +1,4 @@
 # Post Reader (React Native)
-Assignment
 
 **Screens**
 
