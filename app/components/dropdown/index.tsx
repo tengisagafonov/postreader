@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import {Icon} from 'assets/icons';
-import {Colors, spacing} from 'config/Theme';
+import {Colors, fontSize, spacing} from 'config/Theme';
 
 interface IDropdownProps {
   placeholder: string;
@@ -110,6 +110,11 @@ const styles = StyleSheet.create({
 });
 
 const dropdownText = (isSelected: boolean) =>
-  ({color: isSelected ? Colors.textColor : Colors.placeholder} as ViewStyle);
+  ({
+    fontFamily: 'Lato',
+    fontWeight: '500',
+    fontSize: fontSize.normalPlus,
+    color: isSelected ? Colors.textColor : Colors.placeholder,
+  } as ViewStyle);
 
 export default Dropdown;

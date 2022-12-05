@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     padding: spacing.medium,
   },
   text: {
+    fontFamily: 'Lato',
     color: Colors.white,
     fontWeight: '600',
     fontSize: fontSize.normalPlus,

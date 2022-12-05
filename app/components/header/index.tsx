@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   title: {
+    fontFamily: 'Lato',
     fontSize: fontSize.medium,
     color: Colors.textColor,
   },

@@ -12,6 +12,9 @@ export const styles = StyleSheet.create({
   space: {marginTop: spacing.small, marginBottom: spacing.medium},
   input: {
     width: '100%',
+    fontFamily: 'Lato',
+    fontWeight: '500',
+    fontSize: fontSize.normalPlus,
     backgroundColor: Colors.background,
     paddingHorizontal: spacing.medium,
     paddingTop: spacing.input,
@@ -27,7 +30,6 @@ export const styles = StyleSheet.create({
     paddingVertical: spacing.input,
     borderRadius: 8,
   },
-  dropdownText: {color: Colors.placeholder},
   photoPicker: {
     alignItems: 'flex-start',
     backgroundColor: Colors.white,
@@ -36,7 +38,11 @@ export const styles = StyleSheet.create({
     paddingTop: spacing.larger,
     paddingBottom: spacing.huge,
   },
-  photoTitle: {marginBottom: spacing.largerPlus, fontSize: fontSize.medium},
+  photoTitle: {
+    marginBottom: spacing.largerPlus,
+    fontSize: fontSize.medium,
+    fontFamily: 'Lato',
+  },
   image: {
     alignItems: 'center',
     justifyContent: 'center',

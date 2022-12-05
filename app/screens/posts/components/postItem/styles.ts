@@ -19,8 +19,14 @@ export const styles = StyleSheet.create({
     borderRadius: 12,
   },
   info: {alignItems: 'flex-start', marginLeft: spacing.larger},
-  title: {fontWeight: '500', fontSize: fontSize.medium, lineHeight: 24},
+  title: {
+    fontFamily: 'Lato',
+    fontWeight: '500',
+    fontSize: fontSize.medium,
+    lineHeight: 24,
+  },
   date: {
+    fontFamily: 'Lato',
     fontSize: fontSize.small,
     marginVertical: spacing.medium,
   },
@@ -42,5 +48,8 @@ export const status = (status_val: Status) =>
 
 export const statusText = (status_val: Status) =>
   ({
+    fontFamily: 'Lato',
+    fontWeight: '500',
+    fontSize: fontSize.normal,
     color: statusColors[status_val],
   } as ViewStyle);
